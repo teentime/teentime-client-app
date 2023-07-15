@@ -1,0 +1,24 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 8px;
+}
+
+.item_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav_item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999999;
+  font-size: 11px;
+}
+
+.active {
+  color: var(--text-color);
+}
