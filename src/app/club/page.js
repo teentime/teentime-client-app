@@ -5,6 +5,7 @@ import BottomNavigation from '@/app/components/BottomNavigation'
 import Image from 'next/image'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Link from 'next/link'
 
 const Club = () => {
   const carouselImages = [
@@ -13,6 +14,7 @@ const Club = () => {
     '/assets/profile.png',
     '/assets/profile.png'
   ]
+  const myClubName = 'abc'
 
   return (
     <div>
@@ -43,10 +45,10 @@ const Club = () => {
       </div>
       <div className={styles.title2}>내 동아리</div>
       <div className={styles.my_club_container}>
-        <div className={styles.my_club}>
+        <Link className={styles.my_club} href={`/club/${myClubName}`}>
           <img className={styles.profile} src='assets/profile.png' alt='Profile'/>
           <p className={styles.name}>동아리 이름</p>
-        </div>
+        </Link>
         <div className={styles.my_club}>
           <img className={styles.profile} src='assets/profile.png' alt='Profile'/>
           <p className={styles.name}>동아리 이름</p>
