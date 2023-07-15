@@ -1,0 +1,22 @@
+.container {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--bg-color);
+}
+
+.left_menu {
+  display: flex;
+  column-gap: 8px;
+}
+
+.right_menu {
+  display: flex;
+  column-gap: 12px;
+}
+
+.title {
+  color: var(--text-color);
+  font-size: 17px;
+}
