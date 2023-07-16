@@ -5,16 +5,17 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
+import Board from '@/app/components/Board'
 
 const CustomTabPanel = (props) => {
-  const { children, value, index, ...other } = props
+  const { children, value, index } = props
 
   return (
     <div
       hidden={value !== index}
     >
       {value === index && (
-        <Box sx={{ p: 5 }}>
+        <Box>
           {children}
         </Box>
       )}
@@ -60,7 +61,7 @@ const MyClub = () => {
         정보
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        게시판
+        <Board/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         사진첩
