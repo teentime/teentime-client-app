@@ -5,32 +5,22 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
+import Board from '@/app/components/Board'
 
 const CustomTabPanel = (props) => {
-  const { children, value, index, ...other } = props
+  const { children, value, index } = props
 
   return (
     <div
-      role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
-      {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3 }}>
+        <Box>
           {children}
         </Box>
       )}
     </div>
   )
-}
-
-const allProps = (index) => {
-  return {
-    id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
-  }
 }
 
 const MyClub = () => {
@@ -60,18 +50,18 @@ const MyClub = () => {
         }}
         TabIndicatorProps={{ style: { background: "#ffffff" } }}
       >
-        <Tab label="정보" {...allProps(0)} />
-        <Tab label="게시판" {...allProps(1)} />
-        <Tab label="사진첩" {...allProps(2)} />
-        <Tab label="채팅" {...allProps(3)} />
-        <Tab label="마이" {...allProps(4)} />
+        <Tab label="정보"/>
+        <Tab label="게시판"/>
+        <Tab label="사진첩"/>
+        <Tab label="채팅"/>
+        <Tab label="마이"/>
       </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
         정보
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        게시판
+        <Board/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
         사진첩
