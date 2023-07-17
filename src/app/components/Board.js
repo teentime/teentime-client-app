@@ -41,10 +41,10 @@ const Board = () => {
           </div>
         </div>
         <div className={styles.posts}>
-          <Post/>
-          <Post/>
-          <Post/>
-          <Post/>
+          <Post username='사용자명' date='0월 0일 수요일 오전 8:12' title='제목' content='본문내용'/>
+          <Post username='사용자명' date='0월 0일 수요일 오전 8:12' title='제목' content='본문내용'/>
+          <Post username='사용자명' date='0월 0일 수요일 오전 8:12' title='제목' content='본문내용'/>
+          <Post username='사용자명' date='0월 0일 수요일 오전 8:12' title='제목' content='본문내용'/>
         </div>
       </div>
       <div className={styles.write_btn}>
