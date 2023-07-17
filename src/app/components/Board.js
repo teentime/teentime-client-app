@@ -1,6 +1,8 @@
 import styles from '@/styles/Board.module.css'
 import Image from 'next/image'
 import { useState } from 'react';
+import Post from './Post';
+import Notice from './Notice';
 
 const Board = () => {
   const [currentValue, setCurrentValue] = useState("실시간 인기순");
@@ -17,7 +19,9 @@ const Board = () => {
           <Image src='/assets/enterNotice.svg' alt='EnterNotice' width={20} height={20}/>
         </div>
         <div className={styles.notices}>
-
+          <Notice username='관리자' title='제목' content='공지내용'/>
+          <Notice username='관리자' title='제목' content='공지내용'/>
+          <Notice username='관리자' title='제목' content='공지내용'/>
         </div>
       </div>
       <div className={styles.board_container}>
@@ -37,7 +41,10 @@ const Board = () => {
           </div>
         </div>
         <div className={styles.posts}>
-            
+          <Post/>
+          <Post/>
+          <Post/>
+          <Post/>
         </div>
       </div>
       <div className={styles.write_btn}>

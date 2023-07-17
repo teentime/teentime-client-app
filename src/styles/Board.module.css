@@ -23,6 +23,15 @@
   white-space: pre-wrap;
 }
 
+.notices {
+  display: flex;
+  column-gap: 8px;
+  margin-top: 11px;
+  padding: 5px;
+  padding-bottom: 16px;
+  overflow-x: auto;
+}
+
 .board_container {
   width: 100%;
 }
