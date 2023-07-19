@@ -52,7 +52,7 @@
 }
 
 .label {
-  color: #B3B3B3;
+  color: var(--dark06);
   font-size: 15px;
 }
 
@@ -64,14 +64,14 @@
   display: flex;
   align-items: center;
   padding: 8px;
-  border-top: solid 1px #B3B3B3;
-  color: #B3B3B3;
+  border-top: solid 1px var(--dark06);
+  color: var(--dark06);
   background-color: var(--bg-color);
   font-size: 14px;
 }
 
 .option:hover {
-  background-color: #595959;
+  background-color: var(--dark07);
 }
 
 .write_btn {

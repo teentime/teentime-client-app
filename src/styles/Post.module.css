@@ -35,7 +35,7 @@
 }
 
 .date {
-  color: #999999;
+  color: var(--dark06);
   font-size: 14px;
 }
 
@@ -47,7 +47,7 @@
 
 .content {
   margin-top: 8px;
-  color: #999999;
+  color: var(--dark07);
   font-size: 14px;
 }
 

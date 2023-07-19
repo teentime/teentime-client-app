@@ -69,7 +69,7 @@
 
 .my_club .name {
   margin-top: 8px;
-  color: #CCCCCC;
+  color: var(--dark06);
   font-size: 15px;
   text-align: center;
   white-space: nowrap;
@@ -86,8 +86,8 @@
 .category .item {
   height: 36px;
   padding: 8px 12px;
-  color: #CCCCCC;
-  background-color: #333333;
+  color: var(--dark06);
+  background-color: var(--dark12);
   font-size: 15px;
   border-radius: 8px;
   white-space: nowrap;
@@ -114,7 +114,7 @@
 
 .club .text {
   margin-bottom: 4px;
-  color: #CCCCCC;
+  color: var(--dark07);
   font-size: 14px;
 }
 
@@ -128,7 +128,7 @@
 .info {
   display: flex;
   align-items: center;
-  color: #B3B3B3;
+  color: var(--dark06);
   font-size: 15px;
   white-space: pre-wrap;
 }
@@ -190,7 +190,7 @@
 
 .recommended_club .info {
   margin-top: 4px;
-  color: #999999;
+  color: var(--dark06);
   font-size: 14px;
 }
 
@@ -221,5 +221,5 @@
   border-radius: 8px;
   background-image: url('../../public/assets/profile.png');
   background-size: cover;
-  color: #F2F2F2;
+  color: var(--dark11);
 }
