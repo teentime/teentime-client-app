@@ -31,7 +31,7 @@ const MyClub = () => {
 
   return (
     <div>
-      <Header title='abc'/>
+      <Header title='abc' isClub={true}/>
       <Box>
       <Tabs 
         value={value} 

@@ -1,8 +1,10 @@
 .container {
+  width: 100%;
   height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 16px;
   background-color: var(--bg-color);
 }
 
@@ -17,6 +19,7 @@
 }
 
 .title {
+  margin: 0 auto;
   color: var(--text-color);
   font-size: 17px;
 }

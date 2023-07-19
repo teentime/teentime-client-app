@@ -10,9 +10,9 @@ const Header = (props) => {
     <div className={styles.container}>
       <div className={styles.left_menu}>
         <Image onClick={() => {router.back()}} src='/assets/back.svg' alt='Back' width={24} height={24}/>
-        <div className={styles.title}>{props.title}</div>
       </div>
-      <div className={styles.right_menu}>
+      <div className={styles.title}>{props.title}</div>
+      <div className={styles.right_menu} style={props.isClub ? {display: 'block'} : {display: 'none'}}>
         <Image src='/assets/share.svg' alt='share' width={24} height={24}/>
         <Image src='/assets/menu.svg' alt='menu' width={24} height={24}/>
       </div>
