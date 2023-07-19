@@ -2,6 +2,18 @@
   --bg-color: #17181A;
   --text-color: #FFFFFF;
   --main-color: linear-gradient(rgba(110, 120, 209, 1), rgba(90, 96, 233, 1));
+  --dark01: #17181A;
+  --dark02: #2F3031;
+  --dark03: #454648;
+  --dark04: #5D5E5F;
+  --dark05: #747476;
+  --dark06: #8A8B8C;
+  --dark07: #A2A3A3;
+  --dark08: #BABABB;
+  --dark09: #D1D1D1;
+  --dark10: #E8E8E9;
+  --dark11: #F3F3F3;
+  --dark12: #232426;
 }
 
 * {
