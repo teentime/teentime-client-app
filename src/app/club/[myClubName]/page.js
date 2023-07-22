@@ -5,8 +5,9 @@ import Tabs from '@mui/material/Tabs'
 import Tab from '@mui/material/Tab'
 import Box from '@mui/material/Box'
 import { useState } from 'react'
-import Board from '@/app/components/Board'
-import Info from '@/app/components/Info'
+import Board from '@/app/components/club/Board'
+import Info from '@/app/components/club/Info'
+import Album from '@/app/components/club/Album'
 
 const CustomTabPanel = (props) => {
   const { children, value, index } = props
@@ -65,7 +66,7 @@ const MyClub = () => {
         <Board/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        사진첩
+        <Album/>
       </CustomTabPanel>
       <CustomTabPanel value={value} index={3}>
         채팅

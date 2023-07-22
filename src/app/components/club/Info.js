@@ -1,5 +1,4 @@
 import styles from '@/styles/Info.module.css'
-import Header from './Header'
 import Image from 'next/image'
 
 const Info = () => {
