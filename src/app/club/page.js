@@ -103,8 +103,8 @@ const Club = () => {
             <p className={styles.text}>카테고리</p>
             <p>동아리명</p>
             <div className={styles.info_container}>
-              <p className={styles.info}><Image src='/assets/count.svg' alt='Count' width={20} height={20}/> 00명</p>
-              <p className={styles.info}><Image src='/assets/location.svg' alt='Location' width={20} height={20}/> 장소</p>
+              <p className={styles.info}><Image src='/assets/club/count.svg' alt='Count' width={20} height={20}/> 00명</p>
+              <p className={styles.info}><Image src='/assets/club/location.svg' alt='Location' width={20} height={20}/> 장소</p>
             </div>
           </div>
         </div>
@@ -114,8 +114,8 @@ const Club = () => {
             <p className={styles.text}>카테고리</p>
             <p>동아리명</p>
             <div className={styles.info_container}>
-              <p className={styles.info}><Image src='/assets/count.svg' alt='Count' width={20} height={20}/> 00명</p>
-              <p className={styles.info}><Image src='/assets/location.svg' alt='Location' width={20} height={20}/> 장소</p>
+              <p className={styles.info}><Image src='/assets/club/count.svg' alt='Count' width={20} height={20}/> 00명</p>
+              <p className={styles.info}><Image src='/assets/club/location.svg' alt='Location' width={20} height={20}/> 장소</p>
             </div>
           </div>
         </div>
@@ -125,8 +125,8 @@ const Club = () => {
             <p className={styles.text}>카테고리</p>
             <p>동아리명</p>
             <div className={styles.info_container}>
-              <p className={styles.info}><Image src='/assets/count.svg' alt='Count' width={20} height={20}/> 00명</p>
-              <p className={styles.info}><Image src='/assets/location.svg' alt='Location' width={20} height={20}/> 장소</p>
+              <p className={styles.info}><Image src='/assets/club/count.svg' alt='Count' width={20} height={20}/> 00명</p>
+              <p className={styles.info}><Image src='/assets/club/location.svg' alt='Location' width={20} height={20}/> 장소</p>
             </div>
           </div>
         </div>
@@ -136,8 +136,8 @@ const Club = () => {
             <p className={styles.text}>카테고리</p>
             <p>동아리명</p>
             <div className={styles.info_container}>
-              <p className={styles.info}><Image src='/assets/count.svg' alt='Count' width={20} height={20}/> 00명</p>
-              <p className={styles.info}><Image src='/assets/location.svg' alt='Location' width={20} height={20}/> 장소</p>
+              <p className={styles.info}><Image src='/assets/club/count.svg' alt='Count' width={20} height={20}/> 00명</p>
+              <p className={styles.info}><Image src='/assets/club/location.svg' alt='Location' width={20} height={20}/> 장소</p>
             </div>
           </div>
         </div>
@@ -147,8 +147,8 @@ const Club = () => {
             <p className={styles.text}>카테고리</p>
             <p>동아리명</p>
             <div className={styles.info_container}>
-              <p className={styles.info}><Image src='/assets/count.svg' alt='Count' width={20} height={20}/> 00명</p>
-              <p className={styles.info}><Image src='/assets/location.svg' alt='Location' width={20} height={20}/> 장소</p>
+              <p className={styles.info}><Image src='/assets/club/count.svg' alt='Count' width={20} height={20}/> 00명</p>
+              <p className={styles.info}><Image src='/assets/club/location.svg' alt='Location' width={20} height={20}/> 장소</p>
             </div>
           </div>
         </div>
@@ -158,7 +158,7 @@ const Club = () => {
         <div className={styles.sub_title}>
           세상 모든 덕질 <br/><span style={{color: '#F6990F'}}>만화 / 애니메이션</span> 동아리
         </div>
-        <Image src='/assets/refresh.svg' alt='Refresh' width={24} height={24}/>
+        <Image src='/assets/club/refresh.svg' alt='Refresh' width={24} height={24}/>
       </div>
       <div className={styles.recommended_club_container}>
         <div className={styles.recommended_club}>

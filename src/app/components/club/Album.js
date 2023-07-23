@@ -10,7 +10,7 @@ const Album = () => {
             <span className={styles.title}>전체 사진 </span>
             <span className={styles.amount}>500</span>
           </div>
-          <Image src='/assets/plus.svg' alt='Plus' width={24} height={24}/>
+          <Image src='/assets/club/plus.svg' alt='Plus' width={24} height={24}/>
         </div>
         <div className={styles.image_container}>
           <img className={styles.photo} src='/assets/profile.png'/>
@@ -38,7 +38,7 @@ const Album = () => {
               </div>
               <div className={styles.date}>00년 00월</div>
             </div>
-            <Image src='/assets/plus.svg' alt='Plus' width={24} height={24}/>
+            <Image src='/assets/club/plus.svg' alt='Plus' width={24} height={24}/>
           </div>
           <div className={styles.image_container}>
             <img className={styles.photo} src='/assets/profile.png'/>
@@ -50,7 +50,7 @@ const Album = () => {
           </div>
         </div>
       </div>
-      <button className={styles.plus_btn}><Image src='/assets/plus.svg' alt='Plus' width={28} height={28}/></button>
+      <button className={styles.plus_btn}><Image src='/assets/club/plus.svg' alt='Plus' width={28} height={28}/></button>
     </div>
   )
 }

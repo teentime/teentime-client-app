@@ -15,8 +15,8 @@ const Board = () => {
     <div className={styles.container}>
       <div className={styles.notice_container}>
         <div className={styles.notice_menu}>
-          <div className={styles.text}>공지사항 <Image src='/assets/notice.svg' alt='Notice' width={20} height={20}/></div>
-          <Image src='/assets/enterNotice.svg' alt='EnterNotice' width={20} height={20}/>
+          <div className={styles.text}>공지사항 <Image src='/assets/club/notice.svg' alt='Notice' width={20} height={20}/></div>
+          <Image src='/assets/club/enterNotice.svg' alt='EnterNotice' width={20} height={20}/>
         </div>
         <div className={styles.notices}>
           <Notice username='관리자' title='제목' content='공지내용'/>
@@ -30,9 +30,9 @@ const Board = () => {
             <div className={styles.label}>{currentValue}</div>
             {
               showOptions ? 
-              <Image src='/assets/selectUp.svg' alt='Up' width={16} height={16}/>
+              <Image src='/assets/club/selectUp.svg' alt='Up' width={16} height={16}/>
               :
-              <Image src='/assets/selectDown.svg' alt='Down' width={16} height={16}/>
+              <Image src='/assets/club/selectDown.svg' alt='Down' width={16} height={16}/>
             }
           </div>
           <div className={styles.option_container} style={{ display: showOptions ? 'block' : 'none'}}>
@@ -48,7 +48,7 @@ const Board = () => {
         </div>
       </div>
       <div className={styles.write_btn}>
-        <Image src='/assets/write.svg' alt='Write' width={24} height={24}/>
+        <Image src='/assets/club/write.svg' alt='Write' width={24} height={24}/>
       </div>
     </div>
   )

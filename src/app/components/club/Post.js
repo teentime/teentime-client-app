@@ -25,10 +25,10 @@ const Post = (props) => {
       </div>
       <div className={styles.bottom}>
         <div className={styles.heart}>
-          <Image src='/assets/filledHeart.svg' alt='FilledHeart' width={24} height={24}/><span className={styles.text}> 50+</span>
+          <Image src='/assets/club/filledHeart.svg' alt='FilledHeart' width={24} height={24}/><span className={styles.text}> 50+</span>
         </div>
         <div className={styles.comment}>
-          <Image src='/assets/comment.svg' alt='Comment' width={24} height={24}/><span className={styles.text}> 50+</span>
+          <Image src='/assets/club/comment.svg' alt='Comment' width={24} height={24}/><span className={styles.text}> 50+</span>
         </div>
       </div>
     </div>
