@@ -50,7 +50,7 @@ const Album = () => {
           </div>
         </div>
       </div>
-      <button className={styles.plus_btn}><Image src='/assets/club/plus.svg' alt='Plus' width={28} height={28}/></button>
+      <button className={styles.plus_btn}><Image src='/assets/club/albumPlus.svg' alt='Plus' width={28} height={28}/></button>
     </div>
   )
 }

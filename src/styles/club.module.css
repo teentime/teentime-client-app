@@ -205,7 +205,6 @@
 
 .topic_container {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 12px;
@@ -219,7 +218,6 @@
   align-items: flex-end;
   padding: 8px;
   border-radius: 8px;
-  background-image: url('../../public/assets/profile.png');
   background-size: cover;
   color: var(--dark11);
 }
