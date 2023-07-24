@@ -1,7 +1,12 @@
 import styles from '@/styles/Info.module.css'
 import Image from 'next/image'
+import { useState } from 'react'
+import JoinModal from './JoinModal'
 
 const Info = () => {
+  const [showModal, setShowModal] = useState(false)
+  const clickModal = () => setShowModal(!showModal)
+
   return (
     <div className={styles.container}>
       <img className={styles.club_img} src='/assets/profile.png' alt='ClubImg'/>
@@ -28,7 +33,8 @@ const Info = () => {
           </div>
         </div>
       </div>
-      <button className={styles.join_btn}>동아리 가입하기</button>
+      <button className={styles.join_btn} onClick={clickModal}>동아리 가입하기</button>
+      {showModal && <JoinModal clickModal={clickModal} />}
     </div>
   )
 }
