@@ -9,7 +9,7 @@ const Notice = (props) => {
           <img className={styles.profile} src='/assets/profile.png' alt='Profile'/>
           <span className={styles.username}>{props.username}</span>
         </div>
-        <Image src='/assets/club/subMenu.svg' alt='NoticeMenu' width={24} height={24}/>
+        <Image src='/assets/subMenu.svg' alt='NoticeMenu' width={24} height={24}/>
       </div>
       <div className={styles.title}>{props.title}</div>
       <div className={styles.content}>{props.content}</div>

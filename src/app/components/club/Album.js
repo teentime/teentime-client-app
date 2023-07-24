@@ -1,7 +1,11 @@
 import styles from '@/styles/Album.module.css'
 import Image from 'next/image'
+import { useState } from 'react'
 
 const Album = () => {
+  const [showButton, setShowButton] = useState(false)
+  const clickButton = () => setShowButton(!showButton)
+
   return (
     <div className={styles.container}>
       <div className={styles.all_album}>
@@ -50,7 +54,16 @@ const Album = () => {
           </div>
         </div>
       </div>
-      <button className={styles.plus_btn}><Image src='/assets/club/albumPlus.svg' alt='Plus' width={28} height={28}/></button>
+      <div className={showButton && styles.btn_container} onClick={clickButton}>
+        <button className={styles.plus_btn} onClick={clickButton}><Image src='/assets/club/albumPlus.svg' alt='Plus' width={28} height={28}/></button>
+        {
+          showButton &&
+            <div className={styles.btn_box}>
+              <button className={styles.upload_btn}><Image src='/assets/club/upload.svg' alt='Upload' width={28} height={28}/></button>
+              <button className={styles.gen_btn}><Image src='/assets/club/folder.svg' alt='Floder' width={28} height={28}/></button>
+            </div>
+        }
+      </div>
     </div>
   )
 }
