@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/colors.dart';
+import 'package:teentime/widgets/club.dart';
 
 class BottomNavigation extends StatefulWidget {
   @override
@@ -11,11 +13,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+  static final List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 1: Business',
       style: optionStyle,
@@ -24,6 +22,7 @@ class _BottomNavigationState extends State<BottomNavigation> {
       'Index 2: School',
       style: optionStyle,
     ),
+    Club(),
     Text(
       'Index 3: Yo',
       style: optionStyle,
@@ -43,9 +42,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('BottomNavigationBar'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -103,6 +99,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
           selectedItemColor: AppColors.dark11,
           unselectedItemColor: AppColors.dark06,
           backgroundColor: AppColors.dark01,
+          selectedFontSize: 11.sp,
+          unselectedFontSize: 11.sp,
         ),
       ),
     );
