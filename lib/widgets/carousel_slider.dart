@@ -70,8 +70,6 @@ class _ImageSliderState extends State<ImageSlider> {
                                       bottomRight: Radius.circular(8.0),
                                     ),
                                   ),
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 12.0, vertical: 6.0),
                                   child: Center(
                                     child: Text(
                                       '${activeIndex + 1} / ${images.length}',
