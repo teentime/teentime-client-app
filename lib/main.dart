@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(360, 800),
+      designSize: const Size(360, 800),
       builder: (context, _) => MaterialApp(
         theme: ThemeData(fontFamily: 'Pretendard'),
         home: BottomNavigation(),

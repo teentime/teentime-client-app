@@ -21,71 +21,67 @@ class _ImageSliderState extends State<ImageSlider> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: [
-          CarouselSlider(
-            carouselController: _controller,
-            options: CarouselOptions(
-              aspectRatio: 41 / 25,
-              viewportFraction: 1,
-              autoPlay: true,
-              enableInfiniteScroll: false,
-              initialPage: 0,
-              onPageChanged: (index, reason) {
-                setState(() {
-                  activeIndex = index;
-                });
-              },
-            ),
-            items: images
-                .map((i) => Builder(
-                      builder: (BuildContext context) {
-                        return Stack(
-                          children: [
-                            GestureDetector(
-                              behavior: HitTestBehavior.translucent,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(8.0),
-                                child: SizedBox(
-                                  width: 328.w,
-                                  height: 200.h,
-                                  child: Image.asset(
-                                    i,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
+    return Column(
+      children: [
+        CarouselSlider(
+          carouselController: _controller,
+          options: CarouselOptions(
+            aspectRatio: 41 / 25,
+            viewportFraction: 1,
+            autoPlay: true,
+            enableInfiniteScroll: false,
+            initialPage: 0,
+            onPageChanged: (index, reason) {
+              setState(() {
+                activeIndex = index;
+              });
+            },
+          ),
+          items: images
+              .map((i) => Builder(
+                    builder: (BuildContext context) {
+                      return Stack(
+                        children: [
+                          GestureDetector(
+                            behavior: HitTestBehavior.translucent,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(8.0),
+                              child: Image.asset(
+                                i,
+                                fit: BoxFit.cover,
+                                width: 328.w,
+                                height: 200.h,
                               ),
                             ),
-                            Positioned(
-                              width: 67.w,
-                              height: 35.h,
-                              right: 0.w,
-                              bottom: 39.h,
-                              child: Container(
-                                  decoration: BoxDecoration(
-                                    color: AppColors.dark10.withOpacity(0.5),
-                                    borderRadius: BorderRadius.only(
-                                      topLeft: Radius.circular(8.0),
-                                      bottomRight: Radius.circular(8.0),
-                                    ),
+                          ),
+                          Positioned(
+                            width: 67.w,
+                            height: 35.h,
+                            right: 0.w,
+                            bottom: 39.h,
+                            child: Container(
+                                decoration: BoxDecoration(
+                                  color: AppColors.dark10.withOpacity(0.5),
+                                  borderRadius: const BorderRadius.only(
+                                    topLeft: Radius.circular(8.0),
+                                    bottomRight: Radius.circular(8.0),
                                   ),
-                                  child: Center(
-                                    child: Text(
-                                      '${activeIndex + 1} / ${images.length}',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 14.sp),
-                                    ),
-                                  )),
-                            ),
-                          ],
-                        );
-                      },
-                    ))
-                .toList(),
-          ),
-        ],
-      ),
+                                ),
+                                child: Center(
+                                  child: Text(
+                                    '${activeIndex + 1} / ${images.length}',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 14.sp),
+                                  ),
+                                )),
+                          ),
+                        ],
+                      );
+                    },
+                  ))
+              .toList(),
+        ),
+      ],
     );
   }
 }

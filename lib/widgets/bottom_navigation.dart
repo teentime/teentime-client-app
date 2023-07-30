@@ -14,20 +14,20 @@ class _BottomNavigationState extends State<BottomNavigation> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static final List<Widget> _widgetOptions = <Widget>[
-    Text(
+    const Text(
       'Index 1: Business',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Index 2: School',
       style: optionStyle,
     ),
     Club(),
-    Text(
+    const Text(
       'Index 3: Yo',
       style: optionStyle,
     ),
-    Text(
+    const Text(
       'Index 4: Yeah',
       style: optionStyle,
     ),
