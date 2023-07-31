@@ -56,6 +56,8 @@ class _RecommandedClubCardState extends State<RecommandedClubCard>
             child: DecoratedBox(
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
                   colors: [
                     AppColors.main,
                     AppColors.sub,
@@ -66,6 +68,9 @@ class _RecommandedClubCardState extends State<RecommandedClubCard>
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.transparent,
+                  shadowColor: Colors.transparent,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0)),
                 ),
                 onPressed: () {},
                 child: Text(
