@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:teentime/colors.dart';
+import 'package:teentime/src/colors.dart';
 
 final CarouselController _controller = CarouselController();
 

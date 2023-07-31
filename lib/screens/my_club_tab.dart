@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:teentime/colors.dart';
+import 'package:teentime/src/colors.dart';
 
 class MyClubTab extends StatelessWidget {
   @override

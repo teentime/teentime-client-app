@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:teentime/colors.dart';
-import 'package:teentime/widgets/carousel_slider.dart';
-import 'package:teentime/widgets/my_club_tab.dart';
-import 'package:teentime/widgets/my_tab.dart';
+import 'package:teentime/src/colors.dart';
+import 'package:teentime/screens/carousel_slider.dart';
+import 'package:teentime/screens/my_club_tab.dart';
+import 'package:teentime/screens/my_tab.dart';
+import 'package:teentime/screens/subject_tab.dart';
 
 class Club extends StatefulWidget {
   @override
@@ -48,9 +49,11 @@ class _ClubState extends State<Club> {
               });
             },
           ),
-          Expanded(
+          SizedBox(
+            height: 132.h,
             child: isClubTabSelected ? MyClubTab() : Text('내 채팅방 탭'),
           ),
+          SubjectTab(),
         ],
       ),
       backgroundColor: AppColors.dark01,
