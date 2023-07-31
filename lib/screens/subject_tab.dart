@@ -52,6 +52,27 @@ class _SubjectTabState extends State<SubjectTab>
               ClubCard(),
               ClubCard(),
               ClubCard(),
+              ElevatedButton(
+                onPressed: () {
+                  // 모두 보기 버튼이 눌렸을 때 수행할 동작을 여기에 구현
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.dark01,
+                  minimumSize: Size(double.infinity, 38.h),
+                  padding: EdgeInsets.zero,
+                  shape: const RoundedRectangleBorder(
+                    borderRadius: BorderRadius.zero,
+                  ),
+                  shadowColor: Colors.transparent,
+                ),
+                child: Text(
+                  '모두 보기',
+                  style: TextStyle(
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.normal,
+                      color: AppColors.dark06),
+                ),
+              ),
             ],
           ),
         ),
@@ -103,7 +124,7 @@ class _SubjectTabState extends State<SubjectTab>
           ),
         ),
         SizedBox(
-          height: 517.h,
+          height: 600.h,
           child: _buildSelectedTabContent(),
         ),
       ],

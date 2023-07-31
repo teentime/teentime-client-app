@@ -6,7 +6,6 @@ import 'package:teentime/screens/carousel_slider.dart';
 import 'package:teentime/screens/my_club_tab.dart';
 import 'package:teentime/screens/my_tab.dart';
 import 'package:teentime/screens/subject_tab.dart';
-import 'package:teentime/widgets/club_card.dart';
 
 class Club extends StatefulWidget {
   @override
