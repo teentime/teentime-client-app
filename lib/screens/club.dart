@@ -6,6 +6,7 @@ import 'package:teentime/screens/carousel_slider.dart';
 import 'package:teentime/screens/my_club_tab.dart';
 import 'package:teentime/screens/my_tab.dart';
 import 'package:teentime/screens/subject_tab.dart';
+import 'package:teentime/widgets/club_card.dart';
 
 class Club extends StatefulWidget {
   @override
@@ -38,23 +39,25 @@ class _ClubState extends State<Club> {
         backgroundColor: AppColors.dark01,
         elevation: 0,
       ),
-      body: Column(
-        children: [
-          ImageSlider(),
-          MyTab(
-            isClubTabSelected: isClubTabSelected,
-            onTabSelected: (isSelected) {
-              setState(() {
-                isClubTabSelected = isSelected;
-              });
-            },
-          ),
-          SizedBox(
-            height: 132.h,
-            child: isClubTabSelected ? MyClubTab() : Text('내 채팅방 탭'),
-          ),
-          SubjectTab(),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            ImageSlider(),
+            MyTab(
+              isClubTabSelected: isClubTabSelected,
+              onTabSelected: (isSelected) {
+                setState(() {
+                  isClubTabSelected = isSelected;
+                });
+              },
+            ),
+            SizedBox(
+              height: 132.h,
+              child: isClubTabSelected ? MyClubTab() : Text('내 채팅방 탭'),
+            ),
+            SubjectTab(),
+          ],
+        ),
       ),
       backgroundColor: AppColors.dark01,
     );
