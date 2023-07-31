@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/screens/recommanded_club_tab.dart';
+import 'package:teentime/screens/subject_search.dart';
 import 'package:teentime/src/colors.dart';
 import 'package:teentime/screens/carousel_slider.dart';
 import 'package:teentime/screens/my_club_tab.dart';
@@ -57,6 +58,7 @@ class _ClubState extends State<Club> {
             ),
             SubjectTab(),
             RecommandedClubTab(),
+            SubjectSearch(),
           ],
         ),
       ),
