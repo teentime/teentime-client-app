@@ -59,9 +59,7 @@ class _LoginState extends State<Login> {
                   _username = value!;
                 },
               ),
-              SizedBox(
-                height: 36.h,
-              ),
+              SizedBox(height: 36.h),
               CustomTextFormField(
                 labelText: '비밀번호',
                 hintText: '비밀번호를 입력해주세요.',

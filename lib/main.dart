@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:teentime/screens/login.dart';
+import 'package:teentime/screens/sign_up.dart';
 // import 'package:teentime/widgets/bottom_navigation.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       designSize: const Size(360, 800),
       builder: (context, _) => MaterialApp(
         theme: ThemeData(fontFamily: 'Pretendard'),
-        home: Login(),
+        home: SignUp(),
         // home: BottomNavigation(),
       ),
     );
