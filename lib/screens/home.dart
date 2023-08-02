@@ -4,12 +4,12 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 import 'package:teentime/screens/club.dart';
 
-class BottomNavigation extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  State<BottomNavigation> createState() => _BottomNavigationState();
+  State<Home> createState() => _HomeState();
 }
 
-class _BottomNavigationState extends State<BottomNavigation> {
+class _HomeState extends State<Home> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
