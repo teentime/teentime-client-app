@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 import 'package:teentime/src/route.dart';
-import 'package:teentime/widgets/custom_text_form_field.dart';
-import 'package:teentime/widgets/login_menu_button.dart';
+import 'package:teentime/widgets/login/custom_text_form_field.dart';
+import 'package:teentime/widgets/login/login_menu_button.dart';
 
 class Login extends StatefulWidget {
   @override

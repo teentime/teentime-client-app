@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:teentime/screens/login.dart';
 import 'package:teentime/screens/sign_up.dart';
-import 'package:teentime/screens/home.dart';
+import 'package:teentime/screens/bottom_navigation.dart';
 
 class Routes {
   Routes._();
@@ -13,6 +13,6 @@ class Routes {
   static final routes = <String, WidgetBuilder>{
     login: (BuildContext context) => Login(),
     signup: (BuildContext context) => SignUp(),
-    home: (BuildContext context) => Home(),
+    home: (BuildContext context) => BottomNavigator(),
   };
 }

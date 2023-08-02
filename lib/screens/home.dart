@@ -1,106 +1,66 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
-import 'package:teentime/screens/club.dart';
+import 'package:teentime/widgets/home/meal_card.dart';
 
 class Home extends StatefulWidget {
   @override
-  State<Home> createState() => _HomeState();
+  State<StatefulWidget> createState() => __HomeState();
 }
 
-class _HomeState extends State<Home> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static final List<Widget> _widgetOptions = <Widget>[
-    const Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    const Text(
-      'Index 2: School',
-      style: optionStyle,
-    ),
-    Club(),
-    const Text(
-      'Index 3: Yo',
-      style: optionStyle,
-    ),
-    const Text(
-      'Index 4: Yeah',
-      style: optionStyle,
-    ),
-  ];
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-
+class __HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
-      bottomNavigationBar: Theme(
-        data: ThemeData(
-          splashColor: Colors.transparent,
-          highlightColor: Colors.transparent,
+      backgroundColor: AppColors.dark01,
+      appBar: AppBar(
+        title: Text(
+          '안녕하세요, 김틴타님!',
+          style: TextStyle(
+            fontSize: 20.sp,
+            fontWeight: FontWeight.bold,
+            color: AppColors.dark11,
+          ),
         ),
-        child: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: _selectedIndex == 0
-                  ? SvgPicture.asset('assets/icons/selected_home.svg',
-                      height: 28, width: 28)
-                  : SvgPicture.asset('assets/icons/home.svg',
-                      height: 28, width: 28),
-              label: '홈',
-            ),
-            BottomNavigationBarItem(
-              icon: _selectedIndex == 1
-                  ? SvgPicture.asset('assets/icons/selected_school.svg',
-                      height: 28, width: 28)
-                  : SvgPicture.asset('assets/icons/school.svg',
-                      height: 28, width: 28),
-              label: '학교',
-            ),
-            BottomNavigationBarItem(
-              icon: _selectedIndex == 2
-                  ? SvgPicture.asset('assets/icons/selected_club.svg',
-                      height: 28, width: 28)
-                  : SvgPicture.asset('assets/icons/club.svg',
-                      height: 28, width: 28),
-              label: '동아리',
-            ),
-            BottomNavigationBarItem(
-              icon: _selectedIndex == 3
-                  ? SvgPicture.asset('assets/icons/selected_alarm.svg',
-                      height: 28, width: 28)
-                  : SvgPicture.asset('assets/icons/alarm.svg',
-                      height: 28, width: 28),
-              label: '알림',
-            ),
-            BottomNavigationBarItem(
-              icon: _selectedIndex == 4
-                  ? SvgPicture.asset('assets/icons/selected_mypage.svg',
-                      height: 28, width: 28)
-                  : SvgPicture.asset('assets/icons/mypage.svg',
-                      height: 28, width: 28),
-              label: '마이',
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
-          type: BottomNavigationBarType.fixed,
-          selectedItemColor: AppColors.dark11,
-          unselectedItemColor: AppColors.dark06,
-          backgroundColor: AppColors.dark01,
-          selectedFontSize: 11.sp,
-          unselectedFontSize: 11.sp,
+        backgroundColor: AppColors.dark01,
+        elevation: 0,
+      ),
+      body: SingleChildScrollView(
+        // SingleChildScrollView로 감싸기
+        child: Padding(
+          padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 28.0),
+          child: Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    '이번 주 급식',
+                    style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.dark10),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 8.0, bottom: 48.0),
+                child: SizedBox(
+                  height: 260.h,
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: 3,
+                    itemBuilder: (context, index) {
+                      return Padding(
+                        padding: EdgeInsets.only(left: index == 0 ? 0 : 8.w),
+                        child: MealCard(),
+                      );
+                    },
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
