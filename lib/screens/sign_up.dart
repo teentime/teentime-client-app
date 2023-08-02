@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
+import 'package:teentime/src/route.dart';
 import 'package:teentime/widgets/custom_button.dart';
 import 'package:teentime/widgets/custom_text_form_field.dart';
 
@@ -191,7 +192,9 @@ class _SignUpState extends State<SignUp> {
                     borderRadius: BorderRadius.circular(50.0),
                   ),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context).pushNamed(Routes.login);
+                },
                 child: Text(
                   "회원가입",
                   style: TextStyle(

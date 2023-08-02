@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
+import 'package:teentime/src/route.dart';
 import 'package:teentime/widgets/custom_text_form_field.dart';
 import 'package:teentime/widgets/login_menu_button.dart';
 
@@ -21,9 +22,7 @@ class _LoginState extends State<Login> {
 
   void _submitForm() {
     if (_formKey.currentState!.validate()) {
-      // 유효성 검사가 통과하면 이 곳에서 백엔드와 통신하여 로그인 처리를 진행합니다.
-      // _email과 _password 변수를 사용하여 사용자의 입력 정보를 가져올 수 있습니다.
-      // 예: _email, _password를 백엔드로 전송하고 결과에 따라 로그인 성공 또는 실패를 처리합니다.
+      Navigator.of(context).pushNamed(Routes.home);
     }
   }
 
@@ -172,7 +171,7 @@ class _LoginState extends State<Login> {
                   LoginMenuButton(
                     title: "회원가입",
                     onTap: () {
-                      // 회원가입 페이지로 이동
+                      Navigator.of(context).pushNamed(Routes.signup);
                     },
                   ),
                 ],
