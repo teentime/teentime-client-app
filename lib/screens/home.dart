@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
+import 'package:teentime/widgets/calendar.dart';
+import 'package:teentime/widgets/home/calendar_card.dart';
 import 'package:teentime/widgets/home/meal_card.dart';
 import 'package:teentime/widgets/home/todo_card.dart';
 
@@ -11,6 +13,13 @@ class Home extends StatefulWidget {
 }
 
 class __HomeState extends State<Home> {
+  bool isNewTabSelected = true;
+  void onTabSelected(bool isSelected) {
+    setState(() {
+      isNewTabSelected = isSelected;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -98,6 +107,53 @@ class __HomeState extends State<Home> {
               SizedBox(height: 8.h),
               TodoCard(),
               SizedBox(height: 48.h),
+              Row(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      onTabSelected(true);
+                    },
+                    child: Container(
+                      child: Text(
+                        '새 일정',
+                        style: TextStyle(
+                          color: isNewTabSelected
+                              ? AppColors.dark10
+                              : AppColors.dark08,
+                          fontSize: isNewTabSelected ? 18.sp : 16.sp,
+                          fontWeight: isNewTabSelected
+                              ? FontWeight.w500
+                              : FontWeight.normal,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 8.w),
+                  GestureDetector(
+                    onTap: () {
+                      onTabSelected(false);
+                    },
+                    child: Text(
+                      '전체',
+                      style: TextStyle(
+                        color: isNewTabSelected
+                            ? AppColors.dark08
+                            : AppColors.dark10,
+                        fontSize: isNewTabSelected ? 16.sp : 18.sp,
+                        fontWeight: isNewTabSelected
+                            ? FontWeight.normal
+                            : FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              Calendar(),
+              SizedBox(height: 18.h),
+              CalendarCard(),
+              SizedBox(height: 8.h),
+              CalendarCard(),
             ],
           ),
         ),

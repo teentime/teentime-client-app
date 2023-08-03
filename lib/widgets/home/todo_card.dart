@@ -33,7 +33,7 @@ class __TodoCardState extends State<TodoCard> {
               width: 16.w,
               height: 16.h,
               decoration: BoxDecoration(
-                color: _isCompleted ? AppColors.main : AppColors.dark03,
+                color: _isCompleted ? AppColors.main : AppColors.dark02,
                 borderRadius: BorderRadius.circular(4),
               ),
               child: _isCompleted
@@ -46,26 +46,30 @@ class __TodoCardState extends State<TodoCard> {
             ),
           ),
           SizedBox(width: 10.w),
-          Text(
-            '할 일',
-            style: TextStyle(
-              fontSize: 16.sp,
-              fontWeight: FontWeight.normal,
-              color: _isCompleted ? AppColors.dark04 : AppColors.dark10,
-              decoration: _isCompleted
-                  ? TextDecoration.lineThrough
-                  : TextDecoration.none,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                '할 일',
+                style: TextStyle(
+                  fontSize: 16.sp,
+                  fontWeight: FontWeight.normal,
+                  color: _isCompleted ? AppColors.dark04 : AppColors.dark10,
+                  decoration: _isCompleted
+                      ? TextDecoration.lineThrough
+                      : TextDecoration.none,
+                ),
+              ),
+              InkWell(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  'assets/icons/todo_menu.svg',
+                  width: 24.w,
+                  height: 24.h,
+                ),
+              )
+            ],
           ),
-          SizedBox(width: 228.w),
-          InkWell(
-            onTap: () {},
-            child: SvgPicture.asset(
-              'assets/icons/todo_menu.svg',
-              width: 24.w,
-              height: 24.h,
-            ),
-          )
         ],
       ),
     );
