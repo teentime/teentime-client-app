@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class MealCard extends StatefulWidget {
+class PostCard extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => __MealCardState();
+  State<StatefulWidget> createState() => __PostCardState();
 }
 
-class __MealCardState extends State<MealCard> {
+class __PostCardState extends State<PostCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
