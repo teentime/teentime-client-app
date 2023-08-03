@@ -5,6 +5,7 @@ import 'package:teentime/src/colors.dart';
 import 'package:teentime/widgets/calendar.dart';
 import 'package:teentime/widgets/home/calendar_card.dart';
 import 'package:teentime/widgets/home/meal_card.dart';
+import 'package:teentime/widgets/home/post_card.dart';
 import 'package:teentime/widgets/home/todo_card.dart';
 
 class Home extends StatefulWidget {
@@ -154,6 +155,23 @@ class __HomeState extends State<Home> {
               CalendarCard(),
               SizedBox(height: 8.h),
               CalendarCard(),
+              SizedBox(height: 48.h),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Text(
+                    '새 글',
+                    style: TextStyle(
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.dark10),
+                  ),
+                ],
+              ),
+              SizedBox(height: 12.h),
+              PostCard(),
+              SizedBox(height: 12.h),
+              PostCard(),
             ],
           ),
         ),
