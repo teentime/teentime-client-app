@@ -1,7 +1,10 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
+import 'package:teentime/widgets/club/join_modal.dart';
 import 'package:teentime/widgets/club/meeting_card.dart';
 
 class Info extends StatefulWidget {
@@ -137,6 +140,9 @@ class _InfoState extends State<Info> {
                     borderRadius: BorderRadius.circular(8.0),
                   ),
                   child: ElevatedButton(
+                    onPressed: () {
+                      _showJoinModal(context);
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.transparent,
                       shadowColor: Colors.transparent,
@@ -144,7 +150,6 @@ class _InfoState extends State<Info> {
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                     ),
-                    onPressed: () {},
                     child: Text(
                       "동아리 가입하기",
                       style: TextStyle(
@@ -160,6 +165,18 @@ class _InfoState extends State<Info> {
           ),
         ],
       ),
+    );
+  }
+
+  // 모달 창 띄우는 함수
+  void _showJoinModal(BuildContext context) {
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Color.fromRGBO(0, 0, 0, 0.5),
+      isScrollControlled: true,
+      builder: (BuildContext context) {
+        return JoinModal();
+      },
     );
   }
 }
