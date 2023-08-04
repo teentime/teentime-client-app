@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:teentime/screens/info.dart';
 import 'package:teentime/src/colors.dart';
 
 class ClubTab extends StatefulWidget {
@@ -79,50 +80,53 @@ class _ClubTabState extends State<ClubTab> with SingleTickerProviderStateMixin {
         shadowColor: Colors.transparent,
         bottom: TabBar(
           controller: _tabController,
+          labelColor: AppColors.dark11,
+          unselectedLabelColor: AppColors.dark08,
+          indicatorColor: AppColors.dark11,
           tabs: [
             Tab(
               child: Text(
                 '정보',
                 style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.normal,
-                    color: AppColors.dark11),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
             Tab(
               child: Text(
                 '게시판',
                 style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.normal,
-                    color: AppColors.dark08),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
             Tab(
               child: Text(
                 '사진첩',
                 style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.normal,
-                    color: AppColors.dark08),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
             Tab(
               child: Text(
                 '채팅',
                 style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.normal,
-                    color: AppColors.dark08),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
             Tab(
               child: Text(
                 '마이',
                 style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.normal,
-                    color: AppColors.dark08),
+                  fontSize: 15.sp,
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
           ],
@@ -131,7 +135,7 @@ class _ClubTabState extends State<ClubTab> with SingleTickerProviderStateMixin {
       body: TabBarView(
         controller: _tabController,
         children: [
-          Center(child: Text('정보 화면')),
+          Info(),
           Center(child: Text('게시판 화면')),
           Center(child: Text('사진첩 화면')),
           Center(child: Text('채팅 화면')),
