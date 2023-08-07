@@ -4,8 +4,14 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 import 'package:teentime/widgets/club/join_input.dart';
 
-class JoinModal extends StatelessWidget {
-  bool isAgreed = false;
+class JoinModal extends StatefulWidget {
+  @override
+  _JoinModalState createState() => _JoinModalState();
+}
+
+class _JoinModalState extends State<JoinModal> {
+  bool _isValidJoinName = false;
+  bool _isValidGreeting = false;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +21,7 @@ class JoinModal extends StatelessWidget {
         child: Form(
           child: Container(
             width: 328.w,
-            height: 436.h,
+            height: 456.h,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               color: AppColors.dark01,
@@ -92,8 +98,14 @@ class JoinModal extends StatelessWidget {
                           padding: EdgeInsets.only(top: 16.h),
                           child: JoinInput(
                             hintText: '활동명을 입력해주세요',
+                            completeText: '사용 가능한 활동명입니다.',
                             errorText: '활동명을 입력해주세요',
                             maxLength: 10,
+                            onValidChanged: (isValid) {
+                              setState(() {
+                                _isValidJoinName = isValid;
+                              });
+                            },
                           ),
                         ),
                       ),
@@ -112,7 +124,13 @@ class JoinModal extends StatelessWidget {
                   JoinInput(
                     hintText: '가입인사를 작성해주세요',
                     errorText: '가입인사를 작성해주세요',
+                    completeText: '',
                     maxLength: 50,
+                    onValidChanged: (isValid) {
+                      setState(() {
+                        _isValidGreeting = isValid;
+                      });
+                    },
                   ),
                   SizedBox(height: 40.h),
                   Text(
@@ -129,18 +147,25 @@ class JoinModal extends StatelessWidget {
                     height: 42.h,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          begin: Alignment.topCenter,
-                          end: Alignment.bottomCenter,
-                          colors: [
-                            AppColors.main,
-                            AppColors.sub,
-                          ],
-                        ),
+                        gradient: (_isValidJoinName && _isValidGreeting)
+                            ? const LinearGradient(
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter,
+                                colors: [
+                                  AppColors.main,
+                                  AppColors.sub,
+                                ],
+                              )
+                            : null,
+                        color: (_isValidJoinName && _isValidGreeting)
+                            ? null
+                            : AppColors.dark02,
                         borderRadius: BorderRadius.circular(8.0),
                       ),
                       child: ElevatedButton(
-                        onPressed: isAgreed ? () {} : null, // 버튼 활성화 여부 설정
+                        onPressed: (_isValidJoinName && _isValidGreeting)
+                            ? () {}
+                            : null,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.transparent,
                           shadowColor: Colors.transparent,
@@ -153,7 +178,9 @@ class JoinModal extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 16.sp,
                             fontWeight: FontWeight.normal,
-                            color: AppColors.dark11,
+                            color: (_isValidJoinName && _isValidGreeting)
+                                ? AppColors.dark11
+                                : AppColors.dark06,
                           ),
                         ),
                       ),
