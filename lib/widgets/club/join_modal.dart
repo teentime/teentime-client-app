@@ -164,7 +164,9 @@ class _JoinModalState extends State<JoinModal> {
                       ),
                       child: ElevatedButton(
                         onPressed: (_isValidJoinName && _isValidGreeting)
-                            ? () {}
+                            ? () {
+                                Navigator.of(context).pop();
+                              }
                             : null,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.transparent,
