@@ -57,7 +57,7 @@ class __HomeState extends State<Home> {
               ),
               SizedBox(height: 8.h),
               SizedBox(
-                height: 260.h,
+                height: 244,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
@@ -83,8 +83,8 @@ class __HomeState extends State<Home> {
                   InkWell(
                     onTap: () {},
                     child: Container(
-                      width: 24.w,
-                      height: 24.h,
+                      width: 24,
+                      height: 24,
                       decoration: BoxDecoration(
                         color: AppColors.dark12,
                         borderRadius: BorderRadius.circular(8),

@@ -14,22 +14,21 @@ class __MealCardState extends State<MealCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 186.w,
-      height: 260,
+      width: 186,
       decoration: BoxDecoration(
         color: AppColors.dark12,
         borderRadius: BorderRadius.circular(8),
       ),
-      padding: const EdgeInsets.fromLTRB(12.0, 16.0, 12.0, 12.0),
+      padding: const EdgeInsets.fromLTRB(12.0, 16.0, 0, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
-              Text(
+              const Text(
                 '6월 30일 금',
                 style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 14,
                   fontWeight: FontWeight.normal,
                   color: AppColors.dark07,
                 ),
@@ -39,32 +38,32 @@ class __MealCardState extends State<MealCard> {
                 width: 24.w,
                 height: 24.h,
               ),
-              Text(
+              const Text(
                 '3.1',
                 style: TextStyle(
-                  fontSize: 14.sp,
+                  fontSize: 14,
                   fontWeight: FontWeight.normal,
                   color: AppColors.dark09,
                 ),
               ),
             ],
           ),
-          SizedBox(height: 8.h),
-          Text(
+          const SizedBox(height: 8),
+          const Text(
             '햄김치마요덮밥\n유부장국\n과일샐러드\n새송이파프리카볶음\n깍두기\n핫도그',
             style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 16,
                 fontWeight: FontWeight.normal,
                 color: AppColors.dark10,
-                height: 1.4.h),
+                height: 1.4),
           ),
-          SizedBox(height: 14.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               InkWell(
                 onTap: () {},
                 child: Container(
+                  margin: const EdgeInsets.all(12),
                   padding:
                       const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                   decoration: BoxDecoration(
@@ -75,10 +74,10 @@ class __MealCardState extends State<MealCard> {
                     ),
                     borderRadius: BorderRadius.circular(15),
                   ),
-                  child: Text(
+                  child: const Text(
                     '리뷰 작성',
                     style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: 14,
                       fontWeight: FontWeight.normal,
                       color: AppColors.dark11,
                     ),

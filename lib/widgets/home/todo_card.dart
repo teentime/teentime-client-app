@@ -15,7 +15,7 @@ class __TodoCardState extends State<TodoCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 328.w,
-      height: 40.h,
+      height: 40,
       padding: const EdgeInsets.fromLTRB(12.0, 11.0, 8.0, 10.0),
       decoration: BoxDecoration(
         color: AppColors.dark12,
@@ -30,8 +30,8 @@ class __TodoCardState extends State<TodoCard> {
               });
             },
             child: Container(
-              width: 16.w,
-              height: 16.h,
+              width: 16,
+              height: 16,
               decoration: BoxDecoration(
                 color: _isCompleted ? AppColors.main : AppColors.dark02,
                 borderRadius: BorderRadius.circular(4),

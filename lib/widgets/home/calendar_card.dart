@@ -15,7 +15,7 @@ class __CalendarCardState extends State<CalendarCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 328.w,
-      height: 69.h,
+      height: 69,
       padding: const EdgeInsets.fromLTRB(24.0, 14.0, 16.0, 14.0),
       decoration: BoxDecoration(
         color: AppColors.dark12,
@@ -23,10 +23,10 @@ class __CalendarCardState extends State<CalendarCard> {
       ),
       child: Row(
         children: [
-          Text(
+          const Text(
             '1일',
             style: TextStyle(
-              fontSize: 18.sp,
+              fontSize: 18,
               fontWeight: FontWeight.w500,
               color: AppColors.dark11,
             ),
@@ -37,13 +37,13 @@ class __CalendarCardState extends State<CalendarCard> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Column(
+                const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       '동아리명 · 시간 · 인원',
                       style: TextStyle(
-                        fontSize: 15.sp,
+                        fontSize: 15,
                         fontWeight: FontWeight.normal,
                         color: AppColors.dark05,
                       ),
@@ -51,7 +51,7 @@ class __CalendarCardState extends State<CalendarCard> {
                     Text(
                       '일정 제목',
                       style: TextStyle(
-                        fontSize: 16.sp,
+                        fontSize: 16,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark11,
                       ),
@@ -65,8 +65,8 @@ class __CalendarCardState extends State<CalendarCard> {
                     });
                   },
                   child: Container(
-                    width: 32.w,
-                    height: 32.h,
+                    width: 32,
+                    height: 32,
                     decoration: BoxDecoration(
                       color: AppColors.dark02,
                       borderRadius: BorderRadius.circular(4),
@@ -74,13 +74,13 @@ class __CalendarCardState extends State<CalendarCard> {
                     child: _isSend
                         ? SvgPicture.asset(
                             'assets/icons/calendar_filled_alarm.svg',
-                            width: 24.w,
-                            height: 24.h,
+                            width: 24,
+                            height: 24,
                           )
                         : SvgPicture.asset(
                             'assets/icons/calendar_alarm.svg',
-                            width: 24.w,
-                            height: 24.h,
+                            width: 24,
+                            height: 24,
                           ),
                   ),
                 ),

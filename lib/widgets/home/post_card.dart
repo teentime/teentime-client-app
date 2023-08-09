@@ -13,7 +13,7 @@ class __PostCardState extends State<PostCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 328.w,
-      height: 182.h,
+      height: 179,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
       decoration: BoxDecoration(
         color: AppColors.dark01, // 배경색을 지정해야 그림자와 경계가 분명해집니다.
@@ -35,8 +35,8 @@ class __PostCardState extends State<PostCard> {
                 child: Image.asset(
                   'assets/images/profile.png',
                   fit: BoxFit.cover,
-                  width: 40.w,
-                  height: 40.h,
+                  width: 40,
+                  height: 40,
                 ),
               ),
               SizedBox(width: 12.w),
@@ -46,25 +46,26 @@ class __PostCardState extends State<PostCard> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(
                           width: 143.w,
-                          child: Row(
+                          child: const Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
                                 '사용자명',
                                 style: TextStyle(
-                                  fontSize: 15.sp,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w500,
                                   color: AppColors.dark11,
                                 ),
                               ),
-                              SizedBox(width: 7.w),
+                              SizedBox(width: 7),
                               Text(
                                 '동아리명',
                                 style: TextStyle(
-                                  fontSize: 14.sp,
+                                  fontSize: 14,
                                   fontWeight: FontWeight.normal,
                                   color: AppColors.dark06,
                                 ),
@@ -72,10 +73,10 @@ class __PostCardState extends State<PostCard> {
                             ],
                           ),
                         ),
-                        Text(
+                        const Text(
                           '0월 0일 수요일 오전 8:12',
                           style: TextStyle(
-                            fontSize: 14.sp,
+                            fontSize: 14,
                             fontWeight: FontWeight.normal,
                             color: AppColors.dark04,
                           ),
@@ -95,16 +96,16 @@ class __PostCardState extends State<PostCard> {
               ),
             ],
           ),
-          SizedBox(height: 16.h),
+          const SizedBox(height: 16),
           Text(
             '제목입니다.',
             style: TextStyle(
-              fontSize: 16.sp,
+              fontSize: 16,
               fontWeight: FontWeight.w500,
               color: AppColors.dark11,
             ),
           ),
-          SizedBox(height: 8.h),
+          const SizedBox(height: 4),
           Text(
             '내용입니다. 내용입니다. 내용입니다. 내용입니다. 내용입니다.',
             style: TextStyle(
@@ -113,7 +114,7 @@ class __PostCardState extends State<PostCard> {
               color: AppColors.dark08,
             ),
           ),
-          SizedBox(height: 4.h),
+          const SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
@@ -126,7 +127,7 @@ class __PostCardState extends State<PostCard> {
               Text(
                 '50+',
                 style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 14,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark10),
               ),
@@ -140,7 +141,7 @@ class __PostCardState extends State<PostCard> {
               Text(
                 '50+',
                 style: TextStyle(
-                    fontSize: 14.sp,
+                    fontSize: 14,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark10),
               ),
