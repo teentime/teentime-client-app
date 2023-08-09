@@ -4,6 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 
 class MealCard extends StatefulWidget {
+  const MealCard({super.key});
+
   @override
   State<StatefulWidget> createState() => __MealCardState();
 }
@@ -13,7 +15,7 @@ class __MealCardState extends State<MealCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 186.w,
-      height: 244.h,
+      height: 260,
       decoration: BoxDecoration(
         color: AppColors.dark12,
         borderRadius: BorderRadius.circular(8),

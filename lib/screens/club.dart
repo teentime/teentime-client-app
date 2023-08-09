@@ -10,6 +10,8 @@ import 'package:teentime/screens/my_tab.dart';
 import 'package:teentime/screens/subject_tab.dart';
 
 class Club extends StatefulWidget {
+  const Club({super.key});
+
   @override
   State<Club> createState() => _ClubState();
 }
@@ -23,7 +25,8 @@ class _ClubState extends State<Club> {
       appBar: AppBar(
         title: const Text(
           '이런 동아리는 어때요? 👀',
-          style: TextStyle(fontWeight: FontWeight.bold),
+          style:
+              TextStyle(fontWeight: FontWeight.bold, color: AppColors.dark11),
         ),
         actions: [
           InkWell(
@@ -43,7 +46,7 @@ class _ClubState extends State<Club> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ImageSlider(),
+            const ImageSlider(),
             MyTab(
               isClubTabSelected: isClubTabSelected,
               onTabSelected: (isSelected) {
@@ -54,7 +57,8 @@ class _ClubState extends State<Club> {
             ),
             SizedBox(
               height: 132.h,
-              child: isClubTabSelected ? MyClubTab() : Text('내 채팅방 탭'),
+              child:
+                  isClubTabSelected ? const MyClubTab() : const Text('내 채팅방 탭'),
             ),
             SubjectTab(),
             RecommandedClubTab(),

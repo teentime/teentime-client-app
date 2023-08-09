@@ -6,6 +6,8 @@ import 'package:teentime/src/colors.dart';
 final CarouselController _controller = CarouselController();
 
 class ImageSlider extends StatefulWidget {
+  const ImageSlider({super.key});
+
   @override
   State<ImageSlider> createState() => _ImageSliderState();
 }
@@ -50,7 +52,7 @@ class _ImageSliderState extends State<ImageSlider> {
                                 i,
                                 fit: BoxFit.cover,
                                 width: 328.w,
-                                height: 200.h,
+                                height: 218,
                               ),
                             ),
                           ),

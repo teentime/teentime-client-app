@@ -4,6 +4,8 @@ import 'package:teentime/src/colors.dart';
 import 'package:teentime/src/route.dart';
 
 class MyClubTab extends StatelessWidget {
+  const MyClubTab({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
@@ -12,24 +14,24 @@ class MyClubTab extends StatelessWidget {
       itemCount: 6,
       itemBuilder: (context, index) {
         return Row(
-          children: <Widget>[
+          children: [
             if (index != 0) SizedBox(width: 12.w), // 첫 Column 이후에만 간격 추가
-            InkWell(
+            GestureDetector(
               onTap: () {
                 Navigator.of(context).pushNamed(Routes.clubTab);
               },
               child: Column(
-                children: <Widget>[
+                children: [
                   ClipOval(
                     child: Image.asset(
                       'assets/images/profile.png',
                       fit: BoxFit.cover,
-                      width: 52.w,
-                      height: 52.h,
+                      width: 52,
+                      height: 52,
                     ),
                   ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(0, 8, 0, 0),
+                  const SizedBox(height: 8),
+                  SizedBox(
                     width: 70.w,
                     child: Text(
                       '동아리 이름',
