@@ -17,4 +17,5 @@ class AppColors {
   static const Color dark12 = Color(0xFF232426);
   static const Color comic = Color(0xFFF6990F);
   static const Color color1 = Color(0xFFDA5F5F);
+  static const Color volunteer = Color(0xFF17ED7A);
 }
