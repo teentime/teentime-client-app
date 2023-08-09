@@ -13,7 +13,7 @@ class __MeetingCardState extends State<MeetingCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 328.w,
-      height: 148.h,
+      height: 148,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
       decoration: BoxDecoration(
         color: AppColors.dark01,
@@ -29,60 +29,60 @@ class __MeetingCardState extends State<MeetingCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
+          const Text(
             '모임 제목 (인원)',
             style: TextStyle(
-              fontSize: 17.sp,
+              fontSize: 17,
               fontWeight: FontWeight.w500,
               color: AppColors.dark10,
             ),
           ),
-          SizedBox(height: 8.h),
+          const SizedBox(height: 8),
           Row(
             children: [
               SvgPicture.asset(
                 'assets/icons/club_calendar.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              Text(
+              const Text(
                 '0월 0일 화요일 오후 7:40 (140분 간 진행)',
                 style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark07),
               ),
             ],
           ),
-          SizedBox(height: 8.h),
+          const SizedBox(height: 8),
           Row(
             children: [
               SvgPicture.asset(
                 'assets/icons/club_location.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              Text(
+              const Text(
                 '00스튜디오',
                 style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark07),
               ),
             ],
           ),
-          SizedBox(height: 8.h),
+          const SizedBox(height: 8),
           Row(
             children: [
               SvgPicture.asset(
                 'assets/icons/club_price.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              Text(
+              const Text(
                 '개인당 5,700원',
                 style: TextStyle(
-                    fontSize: 16.sp,
+                    fontSize: 16,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark07),
               ),

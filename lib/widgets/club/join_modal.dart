@@ -21,7 +21,7 @@ class _JoinModalState extends State<JoinModal> {
         child: Form(
           child: Container(
             width: 328.w,
-            height: 456.h,
+            height: 389,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8.0),
               color: AppColors.dark01,
@@ -36,10 +36,10 @@ class _JoinModalState extends State<JoinModal> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
+                        const Text(
                           '프로필 작성',
                           style: TextStyle(
-                              fontSize: 17.sp,
+                              fontSize: 17,
                               fontWeight: FontWeight.w500,
                               color: AppColors.dark11),
                         ),
@@ -49,8 +49,8 @@ class _JoinModalState extends State<JoinModal> {
                           },
                           child: SvgPicture.asset(
                             'assets/icons/x.svg',
-                            width: 24.w,
-                            height: 24.h,
+                            width: 24,
+                            height: 24,
                           ),
                         ),
                       ],
@@ -65,8 +65,8 @@ class _JoinModalState extends State<JoinModal> {
                             child: Image.asset(
                               'assets/images/profile.png',
                               fit: BoxFit.cover,
-                              width: 56.w,
-                              height: 56.h,
+                              width: 56,
+                              height: 56,
                             ),
                           ),
                           Positioned(
@@ -75,8 +75,8 @@ class _JoinModalState extends State<JoinModal> {
                             child: InkWell(
                               onTap: () {},
                               child: Container(
-                                width: 24.w,
-                                height: 24.h,
+                                width: 24,
+                                height: 24,
                                 padding: const EdgeInsets.all(4.0),
                                 decoration: const BoxDecoration(
                                   shape: BoxShape.circle,
@@ -84,8 +84,8 @@ class _JoinModalState extends State<JoinModal> {
                                 ),
                                 child: SvgPicture.asset(
                                   'assets/icons/camera.svg',
-                                  width: 16.w,
-                                  height: 16.h,
+                                  width: 16,
+                                  height: 16,
                                 ),
                               ),
                             ),
@@ -95,7 +95,7 @@ class _JoinModalState extends State<JoinModal> {
                       SizedBox(width: 17.w),
                       Expanded(
                         child: Padding(
-                          padding: EdgeInsets.only(top: 16.h),
+                          padding: const EdgeInsets.only(top: 16),
                           child: JoinInput(
                             hintText: '활동명을 입력해주세요',
                             completeText: '사용 가능한 활동명입니다.',
@@ -111,16 +111,16 @@ class _JoinModalState extends State<JoinModal> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 23.h),
-                  Text(
+                  const SizedBox(height: 18),
+                  const Text(
                     '가입 인사',
                     style: TextStyle(
-                      fontSize: 15.sp,
+                      fontSize: 15,
                       fontWeight: FontWeight.normal,
                       color: AppColors.dark09,
                     ),
                   ),
-                  SizedBox(height: 8.h),
+                  const SizedBox(height: 8),
                   JoinInput(
                     hintText: '가입인사를 작성해주세요',
                     errorText: '가입인사를 작성해주세요',
@@ -132,19 +132,19 @@ class _JoinModalState extends State<JoinModal> {
                       });
                     },
                   ),
-                  SizedBox(height: 40.h),
-                  Text(
+                  const SizedBox(height: 16),
+                  const Text(
                     '동아리에서 활동하는 동안 원활한 운영을 위해 아이디, 별명, 활동 내역, 성별, 연령대, 이름이 운영진에게 공개됩니다. 본 동의를 거부하실 수 있으나, 동아리 가입이 불가합니다.',
                     style: TextStyle(
-                      fontSize: 14.sp,
+                      fontSize: 14,
                       fontWeight: FontWeight.normal,
                       color: AppColors.dark03,
                     ),
                   ),
-                  SizedBox(height: 12.h),
+                  const SizedBox(height: 12),
                   SizedBox(
                     width: 296.w,
-                    height: 42.h,
+                    height: 42,
                     child: DecoratedBox(
                       decoration: BoxDecoration(
                         gradient: (_isValidJoinName && _isValidGreeting)
@@ -174,11 +174,12 @@ class _JoinModalState extends State<JoinModal> {
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(8.0),
                           ),
+                          elevation: 0,
                         ),
                         child: Text(
                           "동의 후 가입하기",
                           style: TextStyle(
-                            fontSize: 16.sp,
+                            fontSize: 16,
                             fontWeight: FontWeight.normal,
                             color: (_isValidJoinName && _isValidGreeting)
                                 ? AppColors.dark11

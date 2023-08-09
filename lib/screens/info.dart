@@ -26,93 +26,93 @@ class _InfoState extends State<Info> {
                 'assets/images/profile.png',
                 fit: BoxFit.cover,
                 width: 360.w,
-                height: 130.h,
+                height: 130,
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 32.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       '동아리 이름',
                       style: TextStyle(
-                        fontSize: 20.sp,
+                        fontSize: 20,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark11,
                       ),
                     ),
-                    SizedBox(height: 4.h),
+                    const SizedBox(height: 4),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           '서지원',
                           style: TextStyle(
-                            fontSize: 15.sp,
+                            fontSize: 15,
                             fontWeight: FontWeight.normal,
                             color: AppColors.dark04,
                           ),
                         ),
                         SizedBox(width: 8.w),
-                        SizedBox(
-                          height: 12.h,
-                          child: const VerticalDivider(
+                        const SizedBox(
+                          height: 12,
+                          child: VerticalDivider(
                             color: AppColors.dark06,
                             thickness: 1,
                           ),
                         ),
                         SizedBox(width: 8.w),
-                        Text(
+                        const Text(
                           '30명',
                           style: TextStyle(
-                            fontSize: 15.sp,
+                            fontSize: 15,
                             fontWeight: FontWeight.normal,
                             color: AppColors.dark04,
                           ),
                         ),
                         SizedBox(width: 8.w),
-                        SizedBox(
-                          height: 12.h,
-                          child: const VerticalDivider(
+                        const SizedBox(
+                          height: 12,
+                          child: VerticalDivider(
                             color: AppColors.dark06,
                             thickness: 1,
                           ),
                         ),
                         SizedBox(width: 8.w),
-                        Text(
+                        const Text(
                           '결성일 2023.00.00',
                           style: TextStyle(
-                            fontSize: 15.sp,
+                            fontSize: 15,
                             fontWeight: FontWeight.normal,
                             color: AppColors.dark04,
                           ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 12.h),
-                    SizedBox(
-                      height: 120.h,
+                    const SizedBox(height: 12),
+                    const SizedBox(
+                      height: 120,
                       child: Text(
                         '소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다 소개문입니다',
                         style: TextStyle(
-                          fontSize: 16.sp,
+                          fontSize: 16,
                           fontWeight: FontWeight.normal,
                           color: AppColors.dark06,
                         ),
                       ),
                     ),
-                    SizedBox(height: 20.h),
-                    Text(
+                    const SizedBox(height: 20),
+                    const Text(
                       '모임 일정',
                       style: TextStyle(
-                        fontSize: 18.sp,
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark11,
                       ),
                     ),
-                    SizedBox(height: 8.h),
+                    const SizedBox(height: 8),
                     MeetingCard(),
-                    SizedBox(height: 48.h),
+                    const SizedBox(height: 48),
                   ],
                 ),
               ),
@@ -121,12 +121,11 @@ class _InfoState extends State<Info> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              width: 360.w,
-              padding: EdgeInsets.symmetric(vertical: 7.h),
-              color: AppColors.dark01,
+              width: 328.w,
+              padding: const EdgeInsets.symmetric(vertical: 7),
               child: SizedBox(
                 width: 328.w,
-                height: 42.h,
+                height: 42,
                 child: DecoratedBox(
                   decoration: BoxDecoration(
                     gradient: const LinearGradient(
@@ -149,11 +148,12 @@ class _InfoState extends State<Info> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8.0),
                       ),
+                      elevation: 0,
                     ),
-                    child: Text(
+                    child: const Text(
                       "동아리 가입하기",
                       style: TextStyle(
-                        fontSize: 15.sp,
+                        fontSize: 15,
                         fontWeight: FontWeight.normal,
                         color: AppColors.dark11,
                       ),
@@ -172,7 +172,7 @@ class _InfoState extends State<Info> {
   void _showJoinModal(BuildContext context) {
     showModalBottomSheet(
       context: context,
-      backgroundColor: Color.fromRGBO(0, 0, 0, 0.5),
+      backgroundColor: const Color.fromRGBO(0, 0, 0, 0.5),
       isScrollControlled: true,
       builder: (BuildContext context) {
         return JoinModal();

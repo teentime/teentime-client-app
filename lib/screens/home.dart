@@ -26,10 +26,10 @@ class __HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: AppColors.dark01,
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           '안녕하세요, 김틴타님!',
           style: TextStyle(
-            fontSize: 20.sp,
+            fontSize: 20,
             fontWeight: FontWeight.bold,
             color: AppColors.dark11,
           ),
@@ -43,19 +43,19 @@ class __HomeState extends State<Home> {
           padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 28.0),
           child: Column(
             children: [
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     '이번 주 급식',
                     style: TextStyle(
-                        fontSize: 18.sp,
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark10),
                   ),
                 ],
               ),
-              SizedBox(height: 8.h),
+              const SizedBox(height: 8),
               SizedBox(
                 height: 244,
                 child: ListView.builder(
@@ -69,14 +69,14 @@ class __HomeState extends State<Home> {
                   },
                 ),
               ),
-              SizedBox(height: 48.h),
+              const SizedBox(height: 48),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(
+                  const Text(
                     '오늘의 할 일',
                     style: TextStyle(
-                        fontSize: 18.sp,
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark10),
                   ),
@@ -93,39 +93,37 @@ class __HomeState extends State<Home> {
                         padding: const EdgeInsets.all(4),
                         child: SvgPicture.asset(
                           'assets/icons/todo_plus.svg',
-                          width: 16.w,
-                          height: 16.h,
+                          width: 16,
+                          height: 16,
                         ),
                       ),
                     ),
                   ),
                 ],
               ),
-              SizedBox(height: 13.h),
+              const SizedBox(height: 13),
               TodoCard(),
-              SizedBox(height: 8.h),
+              const SizedBox(height: 8),
               TodoCard(),
-              SizedBox(height: 8.h),
+              const SizedBox(height: 8),
               TodoCard(),
-              SizedBox(height: 48.h),
+              const SizedBox(height: 48),
               Row(
                 children: [
                   GestureDetector(
                     onTap: () {
                       onTabSelected(true);
                     },
-                    child: Container(
-                      child: Text(
-                        '새 일정',
-                        style: TextStyle(
-                          color: isNewTabSelected
-                              ? AppColors.dark10
-                              : AppColors.dark08,
-                          fontSize: isNewTabSelected ? 18.sp : 16.sp,
-                          fontWeight: isNewTabSelected
-                              ? FontWeight.w500
-                              : FontWeight.normal,
-                        ),
+                    child: Text(
+                      '새 일정',
+                      style: TextStyle(
+                        color: isNewTabSelected
+                            ? AppColors.dark10
+                            : AppColors.dark08,
+                        fontSize: isNewTabSelected ? 18 : 16,
+                        fontWeight: isNewTabSelected
+                            ? FontWeight.w500
+                            : FontWeight.normal,
                       ),
                     ),
                   ),
@@ -140,7 +138,7 @@ class __HomeState extends State<Home> {
                         color: isNewTabSelected
                             ? AppColors.dark08
                             : AppColors.dark10,
-                        fontSize: isNewTabSelected ? 16.sp : 18.sp,
+                        fontSize: isNewTabSelected ? 16 : 18,
                         fontWeight: isNewTabSelected
                             ? FontWeight.normal
                             : FontWeight.w500,
@@ -149,28 +147,28 @@ class __HomeState extends State<Home> {
                   ),
                 ],
               ),
-              SizedBox(height: 12.h),
+              const SizedBox(height: 12),
               Calendar(),
-              SizedBox(height: 18.h),
+              const SizedBox(height: 18),
               CalendarCard(),
-              SizedBox(height: 8.h),
+              const SizedBox(height: 8),
               CalendarCard(),
-              SizedBox(height: 48.h),
-              Row(
+              const SizedBox(height: 48),
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     '새 글',
                     style: TextStyle(
-                        fontSize: 18.sp,
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
                         color: AppColors.dark10),
                   ),
                 ],
               ),
-              SizedBox(height: 12.h),
+              const SizedBox(height: 12),
               PostCard(),
-              SizedBox(height: 12.h),
+              const SizedBox(height: 12),
               PostCard(),
             ],
           ),

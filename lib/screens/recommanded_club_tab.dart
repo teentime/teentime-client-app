@@ -20,13 +20,13 @@ class _RecommandedClubTabState extends State<RecommandedClubTab>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Column(
+              const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     '세상의 모든 덕질',
                     style: TextStyle(
-                      fontSize: 18.sp,
+                      fontSize: 18,
                       fontWeight: FontWeight.w500,
                       color: AppColors.dark11,
                     ),
@@ -36,7 +36,7 @@ class _RecommandedClubTabState extends State<RecommandedClubTab>
                       Text(
                         '만화 / 애니메이션 ',
                         style: TextStyle(
-                          fontSize: 18.sp,
+                          fontSize: 18,
                           fontWeight: FontWeight.w500,
                           color: AppColors.comic,
                         ),
@@ -44,7 +44,7 @@ class _RecommandedClubTabState extends State<RecommandedClubTab>
                       Text(
                         '동아리',
                         style: TextStyle(
-                          fontSize: 18.sp,
+                          fontSize: 18,
                           fontWeight: FontWeight.w500,
                           color: AppColors.dark11,
                         ),
@@ -64,7 +64,7 @@ class _RecommandedClubTabState extends State<RecommandedClubTab>
                   ),
                   child: Center(
                     child: SvgPicture.asset('assets/icons/refresh.svg',
-                        width: 20.w, height: 20.h),
+                        width: 20, height: 20),
                   ),
                 ),
               ),
