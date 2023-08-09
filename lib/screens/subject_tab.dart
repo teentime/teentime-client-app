@@ -64,6 +64,7 @@ class _SubjectTabState extends State<SubjectTab>
                     borderRadius: BorderRadius.zero,
                   ),
                   shadowColor: Colors.transparent,
+                  elevation: 0,
                 ),
                 child: Text(
                   '모두 보기',
@@ -124,7 +125,7 @@ class _SubjectTabState extends State<SubjectTab>
           ),
         ),
         SizedBox(
-          height: 600.h,
+          height: 550,
           child: _buildSelectedTabContent(),
         ),
       ],
