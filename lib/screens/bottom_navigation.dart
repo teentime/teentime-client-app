@@ -97,8 +97,8 @@ class _BottomNavigatorState extends State<BottomNavigator> {
           selectedItemColor: AppColors.dark11,
           unselectedItemColor: AppColors.dark06,
           backgroundColor: AppColors.dark01,
-          selectedFontSize: 11.sp,
-          unselectedFontSize: 11.sp,
+          selectedFontSize: 11,
+          unselectedFontSize: 11,
         ),
       ),
     );

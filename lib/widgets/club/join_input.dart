@@ -107,20 +107,20 @@ class _JoinInputState extends State<JoinInput> {
                     ),
                     floatingLabelBehavior: FloatingLabelBehavior.always,
                     hintText: widget.hintText,
-                    hintStyle: TextStyle(
-                      fontSize: 16.sp,
+                    hintStyle: const TextStyle(
+                      fontSize: 16,
                       fontWeight: FontWeight.normal,
                       color: AppColors.dark08,
                     ),
                     errorText:
                         _isValid ? widget.completeText : widget.errorText,
                     errorStyle: TextStyle(
-                      fontSize: 13.sp,
+                      fontSize: 14,
                       fontWeight: FontWeight.normal,
                       color: _isValid ? AppColors.volunteer : AppColors.color1,
                     ),
-                    contentPadding:
-                        EdgeInsets.symmetric(vertical: 15.h, horizontal: 16.w),
+                    contentPadding: const EdgeInsets.symmetric(
+                        vertical: 15, horizontal: 16),
                     filled: true,
                     fillColor: AppColors.dark12,
                   ),
@@ -134,8 +134,8 @@ class _JoinInputState extends State<JoinInput> {
                 ),
               ),
               Container(
-                width: 50.w,
-                height: 51.h,
+                width: 50,
+                height: 49,
                 decoration: const BoxDecoration(
                   color: AppColors.dark12,
                   borderRadius: BorderRadius.only(
@@ -148,8 +148,8 @@ class _JoinInputState extends State<JoinInput> {
                   children: [
                     Text(
                       '${_textEditingController.text.length}/${widget.maxLength}',
-                      style: TextStyle(
-                        fontSize: 15.sp,
+                      style: const TextStyle(
+                        fontSize: 15,
                         fontWeight: FontWeight.normal,
                         color: AppColors.dark03,
                       ),

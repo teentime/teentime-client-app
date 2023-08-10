@@ -3,54 +3,49 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 
-class PostCard extends StatefulWidget {
+class BoardCard extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => __PostCardState();
+  State<StatefulWidget> createState() => __BoardCardState();
 }
 
-class __PostCardState extends State<PostCard> {
+class __BoardCardState extends State<BoardCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 328.w,
-      height: 179,
+      width: 360.w,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
-      decoration: BoxDecoration(
-        color: AppColors.dark01, // 배경색을 지정해야 그림자와 경계가 분명해집니다.
-        borderRadius: BorderRadius.circular(8.0),
-        boxShadow: const [
-          BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.4),
-            blurRadius: 8.0,
-            spreadRadius: 0,
+      decoration: const BoxDecoration(
+        color: AppColors.dark01,
+        border: Border(
+          bottom: BorderSide(
+            color: AppColors.dark12,
+            width: 1.0,
           ),
-        ],
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ClipOval(
-                child: Image.asset(
-                  'assets/images/profile.png',
-                  fit: BoxFit.cover,
-                  width: 40,
-                  height: 40,
-                ),
-              ),
-              SizedBox(width: 12.w),
-              SizedBox(
-                width: 244.w,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(
-                          width: 143.w,
-                          child: const Row(
+              Row(
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                      'assets/images/profile.png',
+                      fit: BoxFit.cover,
+                      width: 40,
+                      height: 40,
+                    ),
+                  ),
+                  SizedBox(width: 12.w),
+                  const Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
                               Text(
@@ -72,28 +67,28 @@ class __PostCardState extends State<PostCard> {
                               ),
                             ],
                           ),
-                        ),
-                        const Text(
-                          '0월 0일 수요일 오전 8:12',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: AppColors.dark04,
+                          Text(
+                            '0월 0일 수요일 오전 8:12',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: AppColors.dark04,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: SvgPicture.asset(
-                        'assets/icons/todo_menu.svg',
-                        width: 24.w,
-                        height: 24.h,
+                        ],
                       ),
-                    )
-                  ],
-                ),
+                    ],
+                  ),
+                ],
               ),
+              InkWell(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  'assets/icons/board_menu.svg',
+                  width: 24.w,
+                  height: 24.h,
+                ),
+              )
             ],
           ),
           const SizedBox(height: 16),
@@ -120,25 +115,25 @@ class __PostCardState extends State<PostCard> {
             children: [
               SvgPicture.asset(
                 'assets/icons/post_heart.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              SizedBox(width: 4.w),
-              Text(
+              const SizedBox(width: 4),
+              const Text(
                 '50+',
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark10),
               ),
-              SizedBox(width: 8.w),
+              const SizedBox(width: 8),
               SvgPicture.asset(
                 'assets/icons/post_comment.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              SizedBox(width: 4.w),
-              Text(
+              const SizedBox(width: 4),
+              const Text(
                 '50+',
                 style: TextStyle(
                     fontSize: 14,

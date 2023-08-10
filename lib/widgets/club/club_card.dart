@@ -19,8 +19,8 @@ class _ClubCardState extends State<ClubCard>
           borderRadius: BorderRadius.circular(8.0),
           child: Image.asset(
             'assets/images/profile.png',
-            width: 80.w,
-            height: 80.h,
+            width: 80,
+            height: 80,
             fit: BoxFit.cover,
           ),
         ),

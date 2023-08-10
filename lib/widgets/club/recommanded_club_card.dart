@@ -12,8 +12,18 @@ class _RecommandedClubCardState extends State<RecommandedClubCard>
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 160.w,
-      height: 204.h,
+      width: 160,
+      decoration: BoxDecoration(
+        color: AppColors.dark01, // 배경색을 지정해야 그림자와 경계가 분명해집니다.
+        borderRadius: BorderRadius.circular(8.0),
+        boxShadow: const [
+          BoxShadow(
+            color: Color.fromRGBO(0, 0, 0, 0.4),
+            blurRadius: 8.0,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
       child: Column(
         children: [
           ClipRRect(
@@ -24,35 +34,35 @@ class _RecommandedClubCardState extends State<RecommandedClubCard>
             child: Image.asset(
               'assets/images/profile.png',
               width: 160.w,
-              height: 89.h,
+              height: 89,
               fit: BoxFit.cover,
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(0, 12.0, 0, 4.0),
+          const Padding(
+            padding: EdgeInsets.fromLTRB(0, 12.0, 0, 4.0),
             child: Text(
               '동아리명',
               style: TextStyle(
-                fontSize: 16.sp,
+                fontSize: 16,
                 fontWeight: FontWeight.w500,
                 color: AppColors.dark11,
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.only(bottom: 11.0),
+          const Padding(
+            padding: EdgeInsets.only(bottom: 11.0),
             child: Text(
               '동아리 소개 문구입니다.',
               style: TextStyle(
-                fontSize: 14.sp,
+                fontSize: 14,
                 fontWeight: FontWeight.normal,
                 color: AppColors.dark06,
               ),
             ),
           ),
           SizedBox(
-            width: 130.w,
-            height: 36.h,
+            width: 130,
+            height: 36,
             child: DecoratedBox(
               decoration: BoxDecoration(
                 gradient: const LinearGradient(
@@ -71,12 +81,13 @@ class _RecommandedClubCardState extends State<RecommandedClubCard>
                   shadowColor: Colors.transparent,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0)),
+                  elevation: 0,
                 ),
                 onPressed: () {},
-                child: Text(
+                child: const Text(
                   "둘러보기",
                   style: TextStyle(
-                    fontSize: 15.sp,
+                    fontSize: 15,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark11,
                   ),
