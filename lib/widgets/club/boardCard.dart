@@ -13,7 +13,6 @@ class __BoardCardState extends State<BoardCard> {
   Widget build(BuildContext context) {
     return Container(
       width: 360.w,
-      height: 179,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
       decoration: const BoxDecoration(
         color: AppColors.dark01,
@@ -28,71 +27,68 @@ class __BoardCardState extends State<BoardCard> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              ClipOval(
-                child: Image.asset(
-                  'assets/images/profile.png',
-                  fit: BoxFit.cover,
-                  width: 40,
-                  height: 40,
-                ),
-              ),
-              SizedBox(width: 12.w),
-              SizedBox(
-                width: 285.w,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Row(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '사용자명',
-                                  style: TextStyle(
-                                    fontSize: 15,
-                                    fontWeight: FontWeight.w500,
-                                    color: AppColors.dark11,
-                                  ),
-                                ),
-                                SizedBox(width: 7),
-                                Text(
-                                  '동아리명',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.normal,
-                                    color: AppColors.dark06,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Text(
-                              '0월 0일 수요일 오전 8:12',
-                              style: TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.normal,
-                                color: AppColors.dark04,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
+              Row(
+                children: [
+                  ClipOval(
+                    child: Image.asset(
+                      'assets/images/profile.png',
+                      fit: BoxFit.cover,
+                      width: 40,
+                      height: 40,
                     ),
-                    InkWell(
-                      onTap: () {},
-                      child: SvgPicture.asset(
-                        'assets/icons/board_menu.svg',
-                        width: 24.w,
-                        height: 24.h,
+                  ),
+                  SizedBox(width: 12.w),
+                  const Row(
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            children: [
+                              Text(
+                                '사용자명',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500,
+                                  color: AppColors.dark11,
+                                ),
+                              ),
+                              SizedBox(width: 7),
+                              Text(
+                                '동아리명',
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.normal,
+                                  color: AppColors.dark06,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Text(
+                            '0월 0일 수요일 오전 8:12',
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                              color: AppColors.dark04,
+                            ),
+                          ),
+                        ],
                       ),
-                    )
-                  ],
-                ),
+                    ],
+                  ),
+                ],
               ),
+              InkWell(
+                onTap: () {},
+                child: SvgPicture.asset(
+                  'assets/icons/board_menu.svg',
+                  width: 24.w,
+                  height: 24.h,
+                ),
+              )
             ],
           ),
           const SizedBox(height: 16),
@@ -119,25 +115,25 @@ class __BoardCardState extends State<BoardCard> {
             children: [
               SvgPicture.asset(
                 'assets/icons/post_heart.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              SizedBox(width: 4.w),
-              Text(
+              const SizedBox(width: 4),
+              const Text(
                 '50+',
                 style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.normal,
                     color: AppColors.dark10),
               ),
-              SizedBox(width: 8.w),
+              const SizedBox(width: 8),
               SvgPicture.asset(
                 'assets/icons/post_comment.svg',
-                width: 24.w,
-                height: 24.h,
+                width: 24,
+                height: 24,
               ),
-              SizedBox(width: 4.w),
-              Text(
+              const SizedBox(width: 4),
+              const Text(
                 '50+',
                 style: TextStyle(
                     fontSize: 14,

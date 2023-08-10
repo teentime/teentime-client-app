@@ -24,7 +24,7 @@ class _BoardState extends State<Board> {
       child: ListView(
         children: [
           Padding(
-            padding: EdgeInsets.fromLTRB(16, 16, 16, 0),
+            padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
