@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:teentime/screens/board.dart';
 import 'package:teentime/screens/info.dart';
 import 'package:teentime/src/colors.dart';
 
@@ -136,7 +137,7 @@ class _ClubTabState extends State<ClubTab> with SingleTickerProviderStateMixin {
         controller: _tabController,
         children: [
           Info(),
-          Center(child: Text('게시판 화면')),
+          Board(),
           Center(child: Text('사진첩 화면')),
           Center(child: Text('채팅 화면')),
           Center(child: Text('마이 화면')),

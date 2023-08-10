@@ -3,28 +3,26 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:teentime/src/colors.dart';
 
-class PostCard extends StatefulWidget {
+class BoardCard extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => __PostCardState();
+  State<StatefulWidget> createState() => __BoardCardState();
 }
 
-class __PostCardState extends State<PostCard> {
+class __BoardCardState extends State<BoardCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 328.w,
+      width: 360.w,
       height: 179,
       padding: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 13.0),
-      decoration: BoxDecoration(
-        color: AppColors.dark01, // 배경색을 지정해야 그림자와 경계가 분명해집니다.
-        borderRadius: BorderRadius.circular(8.0),
-        boxShadow: const [
-          BoxShadow(
-            color: Color.fromRGBO(0, 0, 0, 0.4),
-            blurRadius: 8.0,
-            spreadRadius: 0,
+      decoration: const BoxDecoration(
+        color: AppColors.dark01,
+        border: Border(
+          bottom: BorderSide(
+            color: AppColors.dark12,
+            width: 1.0,
           ),
-        ],
+        ),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -41,52 +39,53 @@ class __PostCardState extends State<PostCard> {
               ),
               SizedBox(width: 12.w),
               SizedBox(
-                width: 244.w,
+                width: 285.w,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    const Row(
                       children: [
-                        SizedBox(
-                          width: 143.w,
-                          child: const Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Text(
-                                '사용자명',
-                                style: TextStyle(
-                                  fontSize: 15,
-                                  fontWeight: FontWeight.w500,
-                                  color: AppColors.dark11,
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Text(
+                                  '사용자명',
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.w500,
+                                    color: AppColors.dark11,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(width: 7),
-                              Text(
-                                '동아리명',
-                                style: TextStyle(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                  color: AppColors.dark06,
+                                SizedBox(width: 7),
+                                Text(
+                                  '동아리명',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                    color: AppColors.dark06,
+                                  ),
                                 ),
+                              ],
+                            ),
+                            Text(
+                              '0월 0일 수요일 오전 8:12',
+                              style: TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.normal,
+                                color: AppColors.dark04,
                               ),
-                            ],
-                          ),
-                        ),
-                        const Text(
-                          '0월 0일 수요일 오전 8:12',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.normal,
-                            color: AppColors.dark04,
-                          ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
                     InkWell(
                       onTap: () {},
                       child: SvgPicture.asset(
-                        'assets/icons/todo_menu.svg',
+                        'assets/icons/board_menu.svg',
                         width: 24.w,
                         height: 24.h,
                       ),
